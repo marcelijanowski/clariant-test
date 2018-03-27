@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { actions } from '../../reducers/componentA/action'
+import { actions } from '../../reducers/componentA/action';
+import componentA from '../../component/component-a/ComponentA';
 
 class DataDashboard extends Component {
   componentDidMount() {
@@ -10,14 +11,14 @@ class DataDashboard extends Component {
     fetchData();
   }
   render() {
-    const { componentA } = this.props;
+    const { componentAData } = this.props;
     
-    if (!componentA) {
+    if (!componentAData) {
       return false
     }
     return (
       <div>
-        
+        <componentA data={componentAData} />
       </div>
     );
   }
@@ -27,13 +28,13 @@ DataDashboard.propTypes = {
   fetchData: PropTypes.func.isRequired
 }
 const mapStateToProps = (state) => ({
-  componentA: state.componentA,
-  componentB: state.componentB,
-  coolantTemperature: state.coolantTemperature,
-  hotspotTemperature: state.hotspotTemperature,
-  outletTemperature: state.outletTemperature,
-  productFlow: state.productFlow,
-  yieldProcent: state.yieldprocent,
+  componentAData: state.componentA,
+  componentBData: state.componentB,
+  coolantTemperatureData: state.coolantTemperature,
+  hotspotTemperatureData: state.hotspotTemperature,
+  outletTemperatureData: state.outletTemperature,
+  productFlowData: state.productFlow,
+  yieldProcentData: state.yieldprocent,
 });
 
 function dispatchToProps (dispatch) {
