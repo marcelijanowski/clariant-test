@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Facebook bootstrap (https://github.com/facebookincubator/create-react-app)
 * Redux (https://redux.js.org/introduction)
 * Redux-Observables (https://redux-observable.js.org/)
-
+* Recharts (http://recharts.org/)
 ### `yarn install`
 
 Install all yarn dependecies
